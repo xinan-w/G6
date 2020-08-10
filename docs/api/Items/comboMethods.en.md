@@ -1,5 +1,5 @@
 ---
-title: Combo
+title: combo.{...}
 order: 3
 ---
 

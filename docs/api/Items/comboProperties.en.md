@@ -1,5 +1,7 @@
-## Combo
-
+---
+title: Combo Model Properties
+order: 5
+---
 
 Except for the common properties, there are special configurations for each type of built-in Combos. The `style`s of them depend on their keyShape. The common properties for built-in Combos can be refered to:
 

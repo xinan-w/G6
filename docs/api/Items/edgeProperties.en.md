@@ -1,5 +1,7 @@
-
-## Edge
+---
+title: Edge Model Properties
+order: 5
+---
 
 Except for the common properties, there are special configurations for each type of built-in Edges. The `style`s of them depend on their keyShape. The common properties for built-in Edges can be refered to:
 

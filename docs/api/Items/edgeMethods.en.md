@@ -1,5 +1,5 @@
 ---
-title: Edge
+title: edge.{...}
 order: 2
 ---
 

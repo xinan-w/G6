@@ -1,5 +1,5 @@
 ---
-title: Behavior
+title: G6.registerBehavior
 order: 7
 ---
 
@@ -7,12 +7,7 @@ Behavior is the compound interactions in G6. In general, a Behavior includes one
 
 By default, Behavior has three callbacks: `shouldBegin`, `shouldUpdate`, and `shouldEnd`, representing the beginning of the behavior, whether to update the items, the ending of the behavior respectively. If they return `false`, the default behavior will be prevented.
 
-This document is going to introduce how to customize a behavior. The infomation about the built-in behaviors can be found in the [Built-in Behaviors](/en/docs/manual/middle/states/defaultBehavior).
-
-
-## G6.registerBehavior(behaviorName, behavior)
-
-When the [built-in Behaviors](/en/docs/manual/middle/states/defaultBehavior) cannot satisfy your requirments, custom a type of Behavior by `G6.registerBehavior(behaviorName, behavior)`. See [Behavior API](/en/docs/api/Behavior) for detail.
+This document is going to introduce how to customize a behavior. The infomation about the built-in behaviors can be found in the [Built-in Behaviors](/en/docs/manual/middle/states/defaultBehavior). When the [built-in Behaviors](/en/docs/manual/middle/states/defaultBehavior) cannot satisfy your requirments, custom a type of Behavior by `G6.registerBehavior(behaviorName, behavior)`. See [Behavior API](/en/docs/api/Behavior) for detail.
 
 ### Parameters
 
@@ -21,7 +16,7 @@ When the [built-in Behaviors](/en/docs/manual/middle/states/defaultBehavior) can
 | behaviorName | String | true | The name of custom Behavior. |
 | behavior | Object | true | The configurations of custom Behavior. For more information, please refer to [Behavior API](/en/docs/api/Behavior). |
 
-### Usage
+**Usage**
 
 ```javascript
 // Custom a type of Behavior
@@ -65,7 +60,7 @@ G6.registerBehavior('behaviorName', {
 });
 ```
 
-## getEvents()
+### getEvents()
 
 Define and handle events when user customize a Behavior.
 
@@ -85,7 +80,7 @@ G6.registerBehavior('behaviorName', {
 }
 ```
 
-## onNodeClick(evt)
+### onNodeClick(evt)
 
 `onNodeClick`, `onEdgeClick`, and `onMouseMove` are custom events for handling `node:click`, `edge:click`, and `mousemove`.
 
@@ -139,7 +134,7 @@ G6.registerBehavior('behaviorName', {
 });
 ```
 
-## getDefaultCfg()
+### getDefaultCfg()
 
 Default configurations while customing a Behavior. The configurations will be mixed by the configurations from user.
 
@@ -157,7 +152,7 @@ G6.registerBehavior('behaviorName', {
 }
 ```
 
-## shouldBegin(evt)
+### shouldBegin(evt)
 
 Whether to prevent the behavior. Return `true` by default, which means do not prevent the behavior. User should call it by themselves.
 
@@ -172,7 +167,7 @@ G6.registerBehavior('behaviorName', {
 });
 ```
 
-## shouldUpdate(evt)
+### shouldUpdate(evt)
 
 Whether to update the data and the view. Returns `true` by default, which means allow updating.
 
@@ -200,6 +195,6 @@ const graph = new G6.Graph({
 });
 ```
 
-## shouldEnd(evt)
+### shouldEnd(evt)
 
 Whether to end the behavior. Returns `true` by default.

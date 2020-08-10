@@ -1,5 +1,5 @@
 ---
-title: Node
+title: node.{...}
 order: 1
 ---
 
